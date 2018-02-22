@@ -4,3 +4,8 @@
 <em><%= @portfolio_item.subtitle %></em>
 <p><%= @portfolio_item.body %></p>
 <%= link_to "Edit", edit_portfolio_path(@portfolio_item) %>
+
+<h2>Technologies</h2>
+<% @portfolio_item.technologies.each do |technology| %>
+  <p><%= technology.name %></p>
+<% end %>
