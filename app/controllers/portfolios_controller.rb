@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  layout "portfolio"
 
   def index
     @portfolio_items = Portfolio.all
@@ -55,7 +56,7 @@ class PortfoliosController < ApplicationController
     def portfolio_params
       params.require(:portfolio).permit(:title,
                                         :subtitle,
-                                        :body, 
+                                        :body,
                                         technologies_attributes: [:name]
                                       )
     end
