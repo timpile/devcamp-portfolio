@@ -1,11 +1,23 @@
 
-<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
-<h1><%= @portfolio_item.title %></h1>
-<em><%= @portfolio_item.subtitle %></em>
-<p><%= @portfolio_item.body %></p>
-<%= link_to "Edit", edit_portfolio_path(@portfolio_item) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+    </div>
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
 
-<h2>Technologies</h2>
-<% @portfolio_item.technologies.each do |technology| %>
-  <p><%= technology.name %></p>
-<% end %>
+      <hr>
+
+      <em><%= @portfolio_item.subtitle %></em>
+      <p><%= @portfolio_item.body %></p>
+
+      <hr>
+
+      <h3>Technologies</h3>
+      <% @portfolio_item.technologies.each do |technology| %>
+        <p><%= technology.name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
