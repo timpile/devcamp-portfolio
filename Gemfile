@@ -42,5 +42,6 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
+gem 'redis', '~> 3.3', '>= 3.3.1'
 
 # gem 'popper_js', '~> 1.12.9'
