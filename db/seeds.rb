@@ -1,8 +1,6 @@
-3.times do |topic|
-  Topic.create!(
-    title: "Topic #{topic}"
-  )
-end
+Topic.create!(title: "Rails")
+Topic.create!(title: "Wordpress")
+Topic.create!(title: "Business Intelligence")
 
 puts "3 topics created"
 
