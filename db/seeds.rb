@@ -1,8 +1,26 @@
-3.times do |topic|
-  Topic.create!(
-    title: "Topic #{topic}"
-  )
-end
+
+User.create!(
+  email: 'timpile@live.com',
+  name: 'Tim Pile',
+  password: "password",
+  password_confirmation: "password",
+  roles: 'site_admin'
+)
+
+puts "1 Admin user created"
+
+User.create!(
+  email: 'test2@test.com',
+  name: 'Regular User',
+  password: "password",
+  password_confirmation: "password"
+)
+
+puts "1 Regular user created"
+
+Topic.create!(title: "Rails")
+Topic.create!(title: "Wordpress")
+Topic.create!(title: "Business Intelligence")
 
 puts "3 topics created"
 
@@ -57,5 +75,3 @@ end
   puts "3 technologies created"
 end
 puts "9 portfolio items created"
-
-User.create!(email: 'timpile@live.com', name: 'Tim Pile', password: "password", password_confirmation: "password", roles: 'site_admin')
